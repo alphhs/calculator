@@ -1,0 +1,120 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  background: linear-gradient(to right,#00aaff, #00ff6c)
+}
+
+.calculator-grid{
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4, 6em);
+  grid-template-rows: minmax(7em, auto) repeat(5, 6em);
+  justify-content: center;
+
+}
+.calculator-grid >button{
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.calculator-grid > button:hover, .calculator-grid> button:focus
+  {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+  
+.span-two{
+  grid-column: span 2;
+}
+.output{
+  grid-column: 1/-1;
+  background-color: rgba(0,0,0, .75);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: .75rem;
+  align-items: flex-end;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output .previous-operand{
+  color: rgba(255,255,255, .75);
+
+}
+.output .current-operand{
+  font-size: 2.5rem;
+  color: white;
+}
+.history{
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.451);
+  width: 23rem;
+  height: 25rem;
+  top: 10%;
+  left: 0;
+  margin: 1rem;
+  padding: 1rem 1.7rem; 
+  word-wrap: break-word;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.history-container{
+ 
+  width: 100%;
+  height: 80%;  
+  overflow-y: scroll;
+
+ 
+  
+}
+.buttons{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  
+}
+.ctrl-btn{
+  padding: .5rem .7rem;
+  background-color: #0281c1;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: .5rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.ctrl-btn:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.248);
+  transition: all 0.3s ease-in-out;
+}
+h3{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.5rem;
+  color: #142e3cce;
+}
+.items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem .25rem;
+  color:  #142e3cce;
+  
+}
+.svg{
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: rgba(26, 26, 26, 0.2);;
+}
+.svg:hover{
+  color: #00aaff;
+  transition: all 0.3s ease-in-out;
+}
